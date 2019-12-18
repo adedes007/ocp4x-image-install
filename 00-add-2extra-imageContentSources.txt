@@ -1,14 +1,13 @@
     imageContentSources:
     - mirrors:
-      - dockerhub.site.gs.com:8413/openshift-release-dev/ocp-release
+      - registry.ocp15.example.com:5000/ocp15/openshift4
       source: quay.io/openshift-release-dev/ocp-release
     - mirrors:
-      - dockerhub.site.gs.com:8413/openshift-release-dev/ocp-release
-      source: registry.svc.ci.openshift.org/ocp/release
-    - mirrors:
-      - dockerhub.site.gs.com:8413/openshift-release-dev/ocp-v4.0-art-dev
+      - registry.ocp15.example.com:5000/ocp15/openshift4
       source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
     - mirrors:
-      - dockerhub.site.gs.com:8413/openshift/release
+      - registry.ocp15.example.com:5000/openshift-release-dev/ocp-release
+      source: registry.svc.ci.openshift.org/ocp/release
+    - mirrors:
+      - registry.ocp15.example.com:5000/openshift/release
       source: quay.io/openshift/release
-
