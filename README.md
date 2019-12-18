@@ -10,10 +10,6 @@ These instructions will get you started on a project that is running on the inte
 
 All you need is a standard RHEL installation and software.
 
-```
-Give examples
-```
-
 ### Installing
 
 First get on your source machine ( internet facing host ) and run the first script - ../source/01-grab-ocp-images.sh  - after you change the first 3 variables to match your own environment.
