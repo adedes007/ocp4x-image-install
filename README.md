@@ -18,7 +18,7 @@ In this step you have copied all release images onto a directory from quay.io. T
 
 ```
 cd ~/git/ocp4x-image-install/source
-./01-grab-ocp-images.sh
+./01-grab-ocp-images.sh 
 ```
 
 
