@@ -17,7 +17,7 @@ First get on your source machine ( internet facing host ) and run the first scri
 In this step you have copied all release images onto a directory from quay.io. The size of that directory is about 4.5 GB.5 GB.5 GB.5 GB.5 GB.
 
 ```
-cd ~/git/ocp4x-image-install/source
+cd ~/git/ocp4x-image-install/source 
 ./01-grab-ocp-images.sh 
 ```
 
