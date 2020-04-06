@@ -1,0 +1,71 @@
+apiVersion: v1
+baseDomain: example.com
+compute:
+- hyperthreading: Enabled
+  name: worker
+  replicas: 3
+controlPlane:
+  hyperthreading: Enabled
+  name: master
+  replicas: 3
+metadata:
+  name: ocp15
+networking:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  networkType: OpenShiftSDN
+  serviceNetwork:
+  - 172.30.0.0/16
+platform:
+  none: {}
+fips: false 
+pullSecret: '{"auths":{"registry.ocp15.example.com:5000": {"auth": "ZHVtbXk6ZHVtbXk=","email": "tdedes@gmail.com"}}}'
+sshKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZ6rNvb5pejaTSRoIse5KadgjNU4W9KMjWKqky3QR5btnEUR+4gCJvqvZtgoYo2DDjUj6vf5M
+evn/Gj4xdrNPQ7JXKOBfBaonmYdMBNzsdBOCZaXElbCwUX75ll2NmdbEpguQbdKO1UsbzGxwFzZX+SFyL4NcvvqbNbhQCm7roPQQrxgy9w037/uOkNM5EixL
+k1Wt+WukaGKmRok+oC7sGH7O0tKi6ok06m86O3UPM9NIYXjxyVoC0OF8tZM1QVqdCotdCINO2UNj4N5lqVwxFLsGvmfrjDWY152v7hmSikWvYH2GwaT/PNuY
+HMUAQNXEdKZy391Z2nuqfiJDlK0wb root@helper.ocp15.example.com'
+additionalTrustBundle: |
+  -----BEGIN CERTIFICATE-----
+  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
+  n3/jitbCQolsVX6cTXut
+  -----END CERTIFICATE-----
+imageContentSources:
+- mirrors:
+  - registry.ocp15.example.com:5000/ocp15/openshift4
+  source: quay.io/openshift-release-dev/ocp-release
+- mirrors:
+  - registry.ocp15.example.com:5000/ocp15/openshift4
+  source: quay.io/openshift-release-dev/ocp-v4.0-art-dev
+
