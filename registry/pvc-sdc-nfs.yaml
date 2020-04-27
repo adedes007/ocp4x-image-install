@@ -1,0 +1,14 @@
+apiVersion: "v1"
+kind: "PersistentVolumeClaim"
+metadata:
+  name: "image-registry-pvc"
+spec:
+  storageClassName: ""
+  volumeName: image-registry-pv
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
+
+

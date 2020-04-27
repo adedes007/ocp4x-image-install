@@ -1,0 +1,29 @@
+oc project default
+oc apply of pv.yaml
+oc project openshift-image-registry
+oc apply pvc-yaml
+
+oc edit configs.imageregistry.operator.openshift.io -o yaml
+changes)
+1) managementState: Managed
+
+2)
+storage:
+  pvc:
+    claim: image-registry-pvc
+
+oc get pvc
+NAME                 STATUS   VOLUME              CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+image-registry-pvc   Bound    image-registry-pv   100Gi      RWX                           13s
+oc get pods
+NAME                                               READY   STATUS    RESTARTS   AGE
+cluster-image-registry-operator-7857d56744-mvbzl   2/2     Running   0          7m30s
+image-registry-65565f4f7c-d8mdp                    0/1     Running   0          9s
+image-registry-7db5466cb8-djk9f                    0/1     Running   0          10s
+node-ca-245bk                                      1/1     Running   0          11s
+node-ca-bgc47                                      1/1     Running   0          11s
+node-ca-fj9kk                                      1/1     Running   0          11s
+node-ca-nnrhf                                      1/1     Running   0          11s
+node-ca-qlf6n                                      1/1     Running   0          11s
+node-ca-vlxwj                                      1/1     Running   0          11s
+
